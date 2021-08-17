@@ -1,5 +1,7 @@
 @import "./utils/variables", "./utils/mixins", "./utils/animations";
-
+@import "./base/typography", "./base/reset";
+@import "./components/btm", "./components/heart", "./components/badge_new", "./components/check_icons";
+@import "./page/resto_page";
 
 // LOADER
 .loader{
