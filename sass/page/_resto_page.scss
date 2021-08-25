@@ -37,6 +37,16 @@
 
 .dishes{
     padding-bottom: 40px;
+    height: 0px;
+    overflow: hidden;
+    animation: appear 1s;
+    animation-fill-mode: forwards;
+    &.delay2{
+        animation-delay: 0.5s;
+    }
+    &.delay3{
+        animation-delay: 1s;
+    }
     &__header{
         margin-bottom: 25px;
         ::after{
@@ -62,10 +72,10 @@
         margin-bottom: 15px;
         overflow: hidden;
         @include shadow;
-        animation: appear 1.5s;
+        /*animation: appear 1.5s;
         animation-timing-function: cubic-bezier(.57,-0.3,.36,1.2);
         transform: scale(0);
-        animation-fill-mode: both;
+        animation-fill-mode: both;*/
         &__txt{
             width: 90%;
             white-space: nowrap;

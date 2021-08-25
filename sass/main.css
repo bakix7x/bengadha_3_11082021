@@ -1,43 +1,21 @@
 @-webkit-keyframes appear {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    height: 0px;
+    overflow: hidden;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    height: 400px;
   }
 }
 
 @keyframes appear {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    height: 0px;
+    overflow: hidden;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    height: 400px;
   }
-}
-
-.delay1 {
-  -webkit-animation-delay: 1.1s;
-          animation-delay: 1.1s;
-}
-
-.delay2 {
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
-}
-
-.delay3 {
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
-}
-
-.delay4 {
-  -webkit-animation-delay: 4.9s;
-          animation-delay: 4.9s;
 }
 
 @-webkit-keyframes progress {
@@ -375,6 +353,22 @@ a {
 
 .dishes {
   padding-bottom: 40px;
+  height: 0px;
+  overflow: hidden;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.dishes.delay2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.dishes.delay3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .dishes__header {
@@ -412,14 +406,10 @@ a {
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 10px #c4c3c0;
           box-shadow: 2px 2px 10px #c4c3c0;
-  -webkit-animation: appear 1.5s;
-          animation: appear 1.5s;
-  -webkit-animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
-          animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  /*animation: appear 1.5s;
+        animation-timing-function: cubic-bezier(.57,-0.3,.36,1.2);
+        transform: scale(0);
+        animation-fill-mode: both;*/
 }
 
 .dishes__card__txt {
@@ -648,6 +638,9 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .pr_main .container {
+    height: 400px;
+  }
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
